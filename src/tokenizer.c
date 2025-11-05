@@ -5,8 +5,7 @@
 
 #include <string.h>
 
-static int ctok_token_type_equals(const ctok_TokenType *a,
-                                  const ctok_TokenType *b) {
+int ctok_token_type_equals(const ctok_TokenType *a, const ctok_TokenType *b) {
   return strcmp(a->name, b->name) == 0;
 }
 

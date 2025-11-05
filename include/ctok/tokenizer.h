@@ -13,6 +13,16 @@
  * All public functions are documented with Doxygen-style comments below.
  */
 
+/**
+ * @brief Describes a single token type.
+ *
+ * Each token type consists of a human-readable name and a regex pattern.
+ *
+ * @todo Add a unique integer ID or precomputed string hash field to enable
+ *       faster comparisons between token types (instead of comparing strings
+ *       at runtime). This will improve lookup performance in parsers and
+ *       ignore-lists.
+ */
 typedef struct {
 
   /**
@@ -102,5 +112,16 @@ ctok_Token ctok_tokenizer_next(ctok_Tokenizer *tokenizer);
  * by the caller; only the internal resources are released.
  */
 void ctok_token_free(ctok_Token *token);
+
+/**
+ * @brief Compare two token types for equality.
+ *
+ * @param a Pointer to the first token type.
+ * @param b Pointer to the second token type.
+ * @return Non-zero if the token types are equal, zero otherwise.
+ *
+ * This function compares the names of the token types using `strcmp`.
+ */
+int ctok_token_type_equals(const ctok_TokenType *a, const ctok_TokenType *b);
 
 #endif
