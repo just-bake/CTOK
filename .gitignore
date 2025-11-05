@@ -1,0 +1,40 @@
+# Object files
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+*.elf
+a.out
+
+# Libraries
+*.lib
+*.so
+*.dll
+*.a
+
+# Debugging files
+*.dbg
+*.dSYM
+
+# Temporary files
+*~
+*.bak
+*.swp
+*.tmp
+
+# Build directories
+build/
+bin/
+obj/
+
+# Caches
+*.cache
+*.cache.*
+
+# IDE/Editor specific files (e.g., Zed)
+.zed/
+
+# Ignore compile commands
+compile_commands.json
